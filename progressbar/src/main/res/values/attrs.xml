@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="StepsCircularProgressBar">
+        <attr name="scp_stepsCount" format="integer" />
+        <attr name="scp_doneStepColor" format="color" />
+        <attr name="scp_undoneStepColor" format="color" />
+        <attr name="scp_gapBetweenSteps" format="dimension" />
+        <attr name="scp_stepThickness" format="dimension" />
+        <attr name="scp_stepExtraRotationAngle" format="float" />
+        <attr name="scp_stepCornerType" format="enum">
+            <enum name="Butt" value="1" />
+            <enum name="Square" value="2" />
+            <enum name="Round" value="3" />
+        </attr>
+    </declare-styleable>
+</resources>
