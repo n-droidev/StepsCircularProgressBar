@@ -40,8 +40,6 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
-//    implementation(project(":progressbar"))
-    implementation("com.github.n-droidev:StepCircularProgressBar:1.0")
-    implementation("implementation 'com.github.n-droidev:StepsCircularProgressBar:22bed4b93b")
+    implementation(project(":progressbar"))
 
 }

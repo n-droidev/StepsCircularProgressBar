@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    id(libs.plugins.maven.publish.get().pluginId)
+    id("maven-publish")
 }
 
 android {
