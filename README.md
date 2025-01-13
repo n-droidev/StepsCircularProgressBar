@@ -7,10 +7,11 @@ StepsCircularProgressBar
 [![](https://jitpack.io/v/aliab/circular-music-progressbar.svg)](https://jitpack.io/#n-droidev/StepsCircularProgressBar)
 ![Apache 2.0](https://img.shields.io/badge/License-Apache%202-brightgreen)
 
-This is an Android project allowing CircularProgressBar to be segmented as steps. It consists of parts as separated arcs. 
-<img src="/art/two_color_round_normal.png" alt="sample 1" title="sample 1" width="431" height="432" align="left" vspace="24" />
-<img src="/art/colorful_butt_thick.png" alt="sample 2" title="sample 2" width="442" height="450" align="center" vspace="24" />
-<img src="/art/colorful_round_thin.png" alt="sample 3" title="sample 3" width="446" height="439" align="right" vspace="24" />
+This is an Android project allowing CircularProgressBar to be segmented as steps. It consists of parts as separated arcs. </br>
+  </br>
+<img src="/art/two_color_round_normal.png" alt="sample 1" title="sample 1" width="286" height="285" align="left" vspace="100" />
+<img src="/art/colorful_butt_thick.png" alt="sample 2" title="sample 2" width="285" height="290" align="center"  vspace="100"/>
+<img src="/art/colorful_round_thin.png" alt="sample 3" title="sample 3" width="288" height="283" align="left" vspace="100" />
 
 Usage
 -----
