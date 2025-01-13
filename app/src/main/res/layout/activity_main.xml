@@ -9,7 +9,7 @@
 
     <n_droidev.progressbar.StepsCircularProgressBar
         android:id="@+id/stepsProgress"
-        android:layout_width="0dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -17,10 +17,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:scp_doneStepColor="#AA354F"
-        app:scp_gapBetweenSteps="10dp"
-        app:scp_stepCornerType="Round"
+        app:scp_gapBetweenSteps="20dp"
+        app:scp_stepCornerType="Butt"
         app:scp_stepExtraRotationAngle="-2.5"
-        app:scp_stepThickness="5dp"
+        app:scp_stepThickness="45dp"
         app:scp_stepsCount="5"
         app:scp_undoneStepColor="#88AA35FF" />
 

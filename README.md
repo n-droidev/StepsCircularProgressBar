@@ -1,9 +1,6 @@
-<p align="center"><img src="/preview/header.png"></p>
-
 StepsCircularProgressBar
 =================
 
-<img src="/preview/preview.gif" alt="sample" title="sample" width="300" height="480" align="right" vspace="24" />
 
 [![Platform](https://img.shields.io/badge/platform-android-green.svg)](http://developer.android.com/index.html)
 [![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=21)
@@ -11,8 +8,11 @@ StepsCircularProgressBar
 ![Apache 2.0](https://img.shields.io/badge/License-Apache%202-brightgreen)
 
 This is an Android project allowing CircularProgressBar to be segmented as steps. It consists of parts as separated arcs. 
+<img src="/art/two_color_round_normal.png" alt="sample 1" title="sample 1" width="431" height="432" align="left" vspace="24" />
+<img src="/art/colorful_butt_thick.png" alt="sample 2" title="sample 2" width="442" height="450" align="center" vspace="24" />
+<img src="/art/colorful_round_thin.png" alt="sample 3" title="sample 3" width="446" height="439" align="right" vspace="24" />
 
-USAGE
+Usage
 -----
 
 To use StepsCircularProgressBar you must add it as a dependency in your Gradle build:
@@ -72,7 +72,7 @@ XML
       app:scp_undoneStepColor="#88AA35FF" />
 ```
 
-KOTLIN
+Kotlin
 -----
 
 ```kotlin
@@ -86,7 +86,7 @@ KOTLIN
       binding.stepsProgress.setData(9, dynamicStepColors = colors)
 ```
 
-LICENCE
+Licence
 -----
 
 StepsCircularProgressBar by [Samir Alakbarov] is licensed under a [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).

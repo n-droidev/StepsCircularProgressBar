@@ -16,14 +16,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val colors = intArrayOf(
+            Color.RED,
             Color.GREEN,
-            Color.MAGENTA,
-            Color.YELLOW,
-            Color.BLUE
+            Color.BLUE,
+            Color.LTGRAY,
+            Color.BLACK,
         )
 
         Handler(Looper.getMainLooper()).postDelayed({
-            binding.stepsProgress.setData(9, dynamicStepColors = colors)
+            binding.stepsProgress.setData(5, dynamicStepColors = colors)
         }, 2000)
     }
 }
