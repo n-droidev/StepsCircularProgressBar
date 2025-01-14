@@ -44,11 +44,11 @@ allprojects {
 Step 2. Add the dependency
 ```groovy
 // Groovy
-implementation 'com.github.n-droidev:StepsCircularProgressBar:1.1'
+implementation 'com.github.n-droidev:StepsCircularProgressBar:2.0'
 ```
 ```kotlin
 // Kotlin DSL
-implementation("com.github.n-droidev:StepsCircularProgressBar:1.1")
+implementation("com.github.n-droidev:StepsCircularProgressBar:2.0")
 ```
 
 
