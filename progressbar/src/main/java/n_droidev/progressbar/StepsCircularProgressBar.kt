@@ -7,6 +7,7 @@ import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.RectF
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import androidx.core.content.res.use
 import androidx.core.graphics.toColorInt
@@ -66,6 +67,15 @@ class StepsCircularProgressBar @JvmOverloads constructor(
     private var dynamicStepColors: IntArray = intArrayOf()
     private var totalSteps = DEFAULT_TOTAL_STEPS
     private var doneSteps = DEFAULT_DONE_STEPS
+        set(value) {
+            if (field <= totalSteps) {
+                field = value
+            } else {
+                field = totalSteps
+                Log.e(this.javaClass.name, "Illegal Argument: doneSteps cannot be greater than totalSteps")
+            }
+            postInvalidate()
+        }
     private var startAngleExtra = ZERO_FLOAT
     private var gapBetweenEachStep = DEFAULT_GAP_BETWEEN_STEPS.dp
     private var angleLengthOfEachStep = ZERO_FLOAT
@@ -157,6 +167,49 @@ class StepsCircularProgressBar @JvmOverloads constructor(
         }
     }
 
+    fun setTotalStepsCount(totalSteps: Int) {
+        this.totalSteps = totalSteps
+        measureAngleLengthOfEachStep()
+        postInvalidate()
+    }
+
+    fun setDoneStepsCount(doneSteps: Int) {
+        this.doneSteps = doneSteps
+        measureAngleLengthOfEachStep()
+        postInvalidate()
+    }
+
+    fun setStepDoneColor(stepDoneColor: Int) {
+        this.stepDoneColor = stepDoneColor
+        postInvalidate()
+    }
+
+    fun setStepUndoneColor(stepUndoneColor: Int) {
+        this.stepUndoneColor = stepUndoneColor
+        postInvalidate()
+    }
+
+    fun setGapBetweenEachStep(gapBetweenEachStep: Float) {
+        this.gapBetweenEachStep = gapBetweenEachStep
+        measureAngleLengthOfEachStep()
+        postInvalidate()
+    }
+
+    fun setStepThickness(stepThickness: Float) {
+        this.stepThickness = stepThickness
+        postInvalidate()
+    }
+
+    fun setStartAngleExtra(startAngleExtra: Float) {
+        this.startAngleExtra = startAngleExtra
+        postInvalidate()
+    }
+
+    fun setStepStrokeType(stepStrokeType: Paint.Cap) {
+        this.stepStrokeType = stepStrokeType
+        postInvalidate()
+    }
+
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         val centerX = width / TWO_FLOAT
@@ -187,7 +240,7 @@ class StepsCircularProgressBar @JvmOverloads constructor(
         }
     }
 
-    fun setData(totalSteps: Int? = null, doneSteps: Int = ZERO, dynamicStepColors: IntArray? = null) {
+    fun setData(totalSteps: Int? = null, doneSteps: Int = ZERO) {
         if (totalSteps != null) {
             this.totalSteps = totalSteps
         }
@@ -196,10 +249,18 @@ class StepsCircularProgressBar @JvmOverloads constructor(
         } else {
             this.totalSteps
         }
+        measureAngleLengthOfEachStep()
+        postInvalidate()
+    }
+
+    fun setData(totalSteps: Int? = null, dynamicStepColors: IntArray? = null) {
+        if (totalSteps != null) {
+            this.totalSteps = totalSteps
+            doneSteps = ZERO
+        }
         if (dynamicStepColors != null) {
             this.dynamicStepColors = dynamicStepColors
         }
-
         measureAngleLengthOfEachStep()
         postInvalidate()
     }

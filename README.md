@@ -8,10 +8,11 @@ StepsCircularProgressBar
 ![Apache 2.0](https://img.shields.io/badge/License-Apache%202-brightgreen)
 
 This is an Android project allowing CircularProgressBar to be segmented as steps. It consists of parts as separated arcs. </br>
-  </br>
-<img src="/art/two_color_round_normal.png" alt="sample 1" title="sample 1" width="286" height="285" align="left" vspace="100" />
-<img src="/art/colorful_butt_thick.png" alt="sample 2" title="sample 2" width="285" height="290" align="center"  vspace="100"/>
-<img src="/art/colorful_round_thin.png" alt="sample 3" title="sample 3" width="288" height="283" align="left" vspace="100" />
+
+![Two colored progressbar](/art/two_color_round_normal.png)
+![Colorful progressbar 1](/art/colorful_butt_thick.png)
+![Colorful progressbar 2](/art/colorful_round_thin.png)
+</br>
 
 Usage
 -----
@@ -77,14 +78,25 @@ Kotlin
 -----
 
 ```kotlin
-      val colors = intArrayOf(
-          Color.GREEN,
-          Color.MAGENTA,
-          Color.YELLOW,
-          Color.BLUE
-      )
+        val colors = intArrayOf(
+            Color.RED,
+            Color.GREEN,
+            Color.BLUE,
+            Color.LTGRAY,
+            Color.BLACK,
+        )
 
-      binding.stepsProgress.setData(9, dynamicStepColors = colors)
+        with(binding.stepsProgress) {
+            setData(5, dynamicStepColors = colors)
+            setTotalStepsCount(7)
+            setDoneStepsCount(4)
+            setGapBetweenEachStep(30f.dp)
+            setStepDoneColor(Color.BLUE)
+            setStepUndoneColor(Color.BLACK)
+            setStepThickness(20f.dp)
+            setStartAngleExtra(20f)
+            setStepStrokeType(Paint.Cap.ROUND)
+        }
 ```
 
 Licence
